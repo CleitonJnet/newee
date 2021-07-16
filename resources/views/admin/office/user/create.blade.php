@@ -1,9 +1,10 @@
-<form action="{{ route('user.store') }}">
+<form action="{{ route('user.store') }}" method="POST">
     @csrf
+    <input type="hidden" name="password" value="EE@Brasil">
     <input type="text" name="name" placeholder="Nome completo">
     <input type="text" name="phone" placeholder="Telefone">
     <input type="text" name="mobile_phone" placeholder="Celular">
-    <input type="email" name="mail" placeholder="E-mail">
+    <input type="email" name="email" placeholder="E-mail">
     <input type="text" name="zip_code" placeholder="CEP" maxlength="8">
     <input type="text" name="street" placeholder="Logradouro">
     <input type="number" name="number" placeholder="Número">
@@ -17,4 +18,5 @@
             <option value="{{ $church->id }}">{{ $church->name }}</option>
         @endforeach
     </select>
+    <input type="submit" value="Salvar">
 </form>
