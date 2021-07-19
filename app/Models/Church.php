@@ -17,7 +17,7 @@ class Church extends Model
         return $this->hasMany(Event::class);
     }
 
-    public function users(){
-        return $this->hasMany(UserOld::class);
+    public function members(){
+        return $this->hasMany(User::class);
     }
 }

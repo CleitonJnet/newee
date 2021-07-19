@@ -29,6 +29,7 @@ class CreateUsersTable extends Migration
             $table->string('neighborhood')->nullable();
             $table->string('city')->nullable();
             $table->string('state')->nullable();
+            $table->string('avatar')->default('img/');
 
             $table->unsignedBigInteger('church_id')->default(1);
             $table->foreign('church_id')->references('id')->on('churches')->onUpdate('cascade')->onDelete('cascade');
